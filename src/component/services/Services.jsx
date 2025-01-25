@@ -180,19 +180,21 @@ const Services = () => {
                                         {description.content && (
                                             <div className={classes.toggle__btn}>
                                                 {description.isOpen ? (
-                                                    <>
-                                                        방법숨기기 <AiOutlineUp />
-                                                    </>
+                                                    <div className={classes.toggle__btn}>
+                                                        <span>방법숨기기</span>
+                                                        <AiOutlineUp />
+                                                    </div>
                                                 ) : (
-                                                    <>
-                                                        방법확인 <AiOutlineDown />
-                                                    </>
+                                                    <div className={classes.toggle__btn}>
+                                                        <span>방법확인</span>
+                                                        <AiOutlineDown />
+                                                    </div>
                                                 )}
                                             </div>
                                         )}
                                     </li>
-                                    {description.content && description.isOpen && (
-                                        <ul>
+                                    {description.content && (
+                                        <ul className={`${description.isOpen ? classes.open : ""}`}>
                                             {description.content.map((content, i) => (
                                                 <li key={i}>
                                                     <p>

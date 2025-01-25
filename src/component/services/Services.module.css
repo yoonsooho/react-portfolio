@@ -35,31 +35,32 @@
     padding: 2rem;
 }
 .service__list > ul {
-    /* margin-left: 2rem; */
     border-left: 1px solid var(--color-primary);
-    padding-left: 1rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding: 1rem 0.5rem;
-    margin: 1rem 0 1rem 2rem;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    margin-left: 2rem;
+
+    transition: all 0.3s ease-in-out;
 }
+
+.service__list > ul.open {
+    max-height: 500px; /* 충분히 큰 값으로 설정 */
+    opacity: 1;
+    margin: 1rem 0 1rem 2rem;
+    padding: 1rem 0.5rem;
+}
+
 .service__list > ul > li {
+    /* margin-left: 2rem; */
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
-
-.service__list > li {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-    position: relative;
-    cursor: pointer;
-}
-
-.service__list li > p {
+.service__list > ul > li > p {
     font-size: 0.9rem;
     margin-left: 1rem;
 }
@@ -75,36 +76,18 @@
     font-size: 0.5rem;
 }
 
-.toggle__btn {
-    background: transparent;
-    border: none;
-    color: var(--color-light);
-    cursor: pointer;
+.service__list > li {
     display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    /* padding: 0.5rem; */
-    margin-left: 2rem;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.service__list li > p {
     font-size: 0.9rem;
-}
-
-.service__list li ul {
-    margin-left: 2rem;
-    border-left: 1px solid var(--color-primary);
-    padding-left: 1rem;
-}
-
-.service__list li ul li {
-    margin-bottom: 0.5rem;
-    font-size: 0.85rem;
-    color: var(--color-light);
-    list-style-type: disc;
-    list-style-position: inside;
-    padding-left: 0.5rem;
-}
-
-.service__list li ul li:last-child {
-    margin-bottom: 0;
+    margin-left: 1rem;
 }
 
 .service__list-skill {
@@ -133,6 +116,12 @@
 .skill_tag:hover {
     background: var(--color-white);
     color: var(--color-bg);
+}
+
+.toggle__btn {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 /* ------------------미디어 쿼리 중간 크기------------------- */

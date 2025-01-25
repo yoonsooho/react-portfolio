@@ -20,6 +20,7 @@ const Testimonials = (props) => {
             <h2>project review</h2>
             <div className={`container ${classes["testimonials__container"]}`}>
                 <Swiper
+                    loop={true}
                     pagination={pagination}
                     modules={[Autoplay, Pagination, Navigation]}
                     autoplay={{
@@ -32,7 +33,7 @@ const Testimonials = (props) => {
                         return (
                             <SwiperSlide className={classes.testimonial} key={item.id}>
                                 <div className={classes.project__IMG}>
-                                    <img src={item.project} alt="project" />
+                                    <img src={item.image} alt="project" />
                                 </div>
                                 <h5 className={classes.project__name}>{item.title}</h5>
                                 <small className={classes.project__review}>{item.review}</small>
