@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { AiOutlineDown, AiOutlineUp } from "react-icons/ai";
 import { BiCheck } from "react-icons/bi";
 import classes from "./Services.module.css";
+import { motion } from "framer-motion";
 const data = [
     {
         id: Math.random(),
@@ -161,8 +162,15 @@ const Services = () => {
             <h5>projects</h5>
             <h2>진행한 프로젝트</h2>
             <div className={`container ${classes["services__container"]}`}>
-                {serviceData.map((item) => (
-                    <article className={classes.service} key={item.id}>
+                {serviceData.map((item, i) => (
+                    <motion.article
+                        className={classes.service}
+                        key={item.id}
+                        viewport={{ once: true, amount: 0.3 }}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ y: { duration: 0.2, ease: "linear" } }}
+                    >
                         <div className={classes["service__head"]}>
                             <h3>{item.content}</h3>
                         </div>
@@ -197,7 +205,11 @@ const Services = () => {
                                         <ul className={`${description.isOpen ? classes.open : ""}`}>
                                             {description.content.map((content, i) => (
                                                 <li key={i}>
-                                                    <p>
+                                                    <p
+                                                        initial={{ opacity: 0, y: 50 }}
+                                                        whileInView={{ opacity: 1, y: 0 }}
+                                                        transition={{ duration: 0.5, delay: i * 0.2 }}
+                                                    >
                                                         <span>{i + 1}. </span>
                                                         {content}
                                                     </p>
@@ -216,7 +228,7 @@ const Services = () => {
                                 </div>
                             ))}
                         </div>
-                    </article>
+                    </motion.article>
                 ))}
             </div>
         </section>

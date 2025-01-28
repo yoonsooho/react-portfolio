@@ -14,10 +14,22 @@ const Portfolio = (props) => {
                         <motion.article
                             key={item.id}
                             className={classes["portfolio__item"]}
-                            initial={{ opacity: 0, y: 50 }}
+                            viewport={{ once: true, amount: 0.3 }}
+                            initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: i * 0.2 }}
-                            whileHover={{ scale: 1.05 }}
+                            transition={{
+                                opacity: { duration: 0.7, delay: i * 0.2 },
+                                y: { duration: 0.7, delay: i * 0.2 },
+                                scale: { duration: 0.2, delay: i * 0.2 },
+                                ease: "linear",
+                            }}
+                            whileHover={{
+                                scale: 1.05,
+                                transition: {
+                                    duration: 0.2,
+                                    ease: "linear",
+                                },
+                            }}
                         >
                             <div className={classes["portfolio__item-image"]}>
                                 <img src={item.image} alt={item.image} />
