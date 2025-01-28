@@ -1,5 +1,6 @@
 import React from "react";
 import classes from "./Portfolio.module.css";
+import { motion } from "framer-motion";
 
 const Portfolio = (props) => {
     return (
@@ -10,7 +11,14 @@ const Portfolio = (props) => {
             <div className={`container ${classes.portfolio__container}`}>
                 {props.data.map((item, i) => {
                     return (
-                        <article className={classes["portfolio__item"]} key={item.id}>
+                        <motion.article
+                            key={item.id}
+                            className={classes["portfolio__item"]}
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: i * 0.2 }}
+                            whileHover={{ scale: 1.05 }}
+                        >
                             <div className={classes["portfolio__item-image"]}>
                                 <img src={item.image} alt={item.image} />
                             </div>
@@ -38,7 +46,7 @@ const Portfolio = (props) => {
                                     Description
                                 </a>
                             </div>
-                        </article>
+                        </motion.article>
                     );
                 })}
             </div>

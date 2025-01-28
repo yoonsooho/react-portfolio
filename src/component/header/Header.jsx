@@ -2,11 +2,17 @@ import React from "react";
 import CTA from "./CTA";
 import classes from "./Header.module.css";
 import HeaderSocials from "./HeaderSocials";
+import { motion } from "framer-motion";
 
 const Header = () => {
     return (
-        <header id="home">
-            <div className={`container ${classes["header__container"]}`}>
+        <header>
+            <motion.div
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+                className={`container ${classes["header__container"]}`}
+            >
                 <h5>안녕하세요 제 이름은</h5>
                 <h1>윤수호입니다.</h1>
                 <h5 className={`${classes["text-light"]}`}>프론트엔드 개발자를 목표하고 있습니다.</h5>
@@ -16,7 +22,7 @@ const Header = () => {
                 <a href="#contact" className={`${classes["scroll__down"]}`}>
                     Scroll Down
                 </a>
-            </div>
+            </motion.div>
         </header>
     );
 };

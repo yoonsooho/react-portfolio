@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import Header from "./component/header/Header";
 import Nav from "./component/nav/Nav";
 import About from "./component/about/About";
@@ -53,16 +54,78 @@ const App = () => {
         },
     ];
 
+    const sectionVariants = {
+        hidden: {
+            opacity: 0,
+            y: 50,
+        },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.6,
+                ease: "easeOut",
+            },
+        },
+    };
+
     return (
         <>
             <Header />
             <Nav />
-            <About />
-            <Experience />
-            <Services />
-            <Portfolio data={data} />
-            <Testimonials data={data} />
-            <Contact />
+            <motion.div
+                initial="hidden"
+                whileInView="visible"
+                variants={sectionVariants}
+                viewport={{ once: true, amount: 0.3 }}
+            >
+                <About />
+            </motion.div>
+
+            <motion.div
+                initial="hidden"
+                whileInView="visible"
+                variants={sectionVariants}
+                viewport={{ once: true, amount: 0.3 }}
+            >
+                <Experience />
+            </motion.div>
+
+            <motion.div
+                initial="hidden"
+                whileInView="visible"
+                variants={sectionVariants}
+                viewport={{ once: true, amount: 0.3 }}
+            >
+                <Services />
+            </motion.div>
+
+            <motion.div
+                initial="hidden"
+                whileInView="visible"
+                variants={sectionVariants}
+                viewport={{ once: true, amount: 0.3 }}
+            >
+                <Portfolio data={data} />
+            </motion.div>
+
+            <motion.div
+                initial="hidden"
+                whileInView="visible"
+                variants={sectionVariants}
+                viewport={{ once: true, amount: 0.3 }}
+            >
+                <Testimonials data={data} />
+            </motion.div>
+
+            <motion.div
+                initial="hidden"
+                whileInView="visible"
+                variants={sectionVariants}
+                viewport={{ once: true, amount: 0.3 }}
+            >
+                <Contact />
+            </motion.div>
             <Footer />
         </>
     );
