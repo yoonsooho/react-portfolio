@@ -10,32 +10,13 @@ import Testimonials from "./component/testimonials/Testimonials";
 import Contact from "./component/contact/Contact";
 import Footer from "./component/footer/Footer";
 
-import IMG1 from "./assets/portfolio1.png";
-import IMG2 from "./assets/portfolio2.gif";
-import IMG3 from "./assets/portfolio3.png";
-import IMG4 from "./assets/portfolio4.png";
-import IMG5 from "./assets/portfolio5.png";
 import ems from "./assets/ems.png";
-
-import project1 from "./assets/portfolio1.png";
-import project2 from "./assets/portfolio2.gif";
-import project3 from "./assets/portfolio3.png";
-import project4 from "./assets/portfolio4.png";
-import project5 from "./assets/portfolio5.png";
+import apimanager from "./assets/apimanager.png";
 
 const App = () => {
     let data = [
         {
             id: 1,
-            image: IMG1,
-            title: "음식예약사이트",
-            github: "https://github.com/yoonsooho/foodOrder",
-            demo: "https://timely-cheesecake-261d4f.netlify.app/",
-            review: "음식 주문 웹사이트로, 원하는 음식을 주문 후 알맞은 정보를 입력하면 form을 통해 전달하는 웹 사이트를 구현하였습니다.",
-            descriptionUrl: "https://perfect-volcano-440.notion.site/EMS-1708f8bdc874805ebbebf3aadd56a286?pvs=4",
-        },
-        {
-            id: 2,
             image: ems,
             title: "EMS 사이트",
             github: "",
@@ -44,13 +25,13 @@ const App = () => {
             descriptionUrl: "https://perfect-volcano-440.notion.site/EMS-1708f8bdc874805ebbebf3aadd56a286?pvs=4",
         },
         {
-            id: 3,
-            image: ems,
-            title: "API메모 사이트",
-            github: "",
+            id: 2,
+            image: apimanager,
+            title: "API매니저 사이트",
+            github: "https://github.com/yoonsooho/apimanager",
             demo: "https://ems-dev.vercel.app",
-            review: "api메모 사이트로 api를 메모처럼 간단하게 저장할 수 있는 웹사이트 입니다. (추후 업데이트 예정)",
-            descriptionUrl: "https://perfect-volcano-440.notion.site/EMS-1708f8bdc874805ebbebf3aadd56a286?pvs=4",
+            review: "api매니저 사이트로 api를 메모처럼 간단하게 저장할 수 있는 웹사이트 입니다.",
+            descriptionUrl: "https://perfect-volcano-440.notion.site/api-18d8f8bdc87480e49cc7e1003c18f1ff?pvs=4",
         },
     ];
 
