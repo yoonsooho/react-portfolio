@@ -29,7 +29,7 @@ const App = () => {
             image: apimanager,
             title: "API매니저 사이트",
             github: "https://github.com/yoonsooho/apimanager",
-            demo: "https://ems-dev.vercel.app",
+            demo: "https://apimanager-z5tr.vercel.app",
             review: "api매니저 사이트로 api를 메모처럼 간단하게 저장할 수 있는 웹사이트 입니다.",
             descriptionUrl: "https://perfect-volcano-440.notion.site/api-18d8f8bdc87480e49cc7e1003c18f1ff?pvs=4",
         },
