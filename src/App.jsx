@@ -22,7 +22,7 @@ const App = () => {
             github: "",
             demo: "https://ems-dev.vercel.app",
             review: "기기 예약 관리자 웹사이트로, 기기등록, 예약, 예약 확인, 예약 취소 등의 기능을 구현하였습니다.",
-            descriptionUrl: "https://perfect-volcano-440.notion.site/EMS-1708f8bdc874805ebbebf3aadd56a286?pvs=4",
+            descriptionUrl: "https://www.notion.so/EMS-1708f8bdc874805ebbebf3aadd56a286?pvs=4",
         },
         {
             id: 2,
@@ -31,7 +31,7 @@ const App = () => {
             github: "https://github.com/yoonsooho/apimanager",
             demo: "https://apimanager-z5tr.vercel.app",
             review: "api매니저 사이트로 api를 메모처럼 간단하게 저장할 수 있는 웹사이트 입니다.",
-            descriptionUrl: "https://perfect-volcano-440.notion.site/api-18d8f8bdc87480e49cc7e1003c18f1ff?pvs=4",
+            descriptionUrl: "https://www.notion.so/API-18d8f8bdc87480e49cc7e1003c18f1ff?pvs=4",
         },
     ];
 
