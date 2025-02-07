@@ -18,16 +18,19 @@ const Portfolio = (props) => {
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{
-                                opacity: { duration: 0.7, delay: i * 0.2 },
-                                y: { duration: 0.7, delay: i * 0.2 },
-                                scale: { duration: 0.2, delay: i * 0.2 },
-                                ease: "linear",
+                                opacity: { duration: 0.2, delay: i * 0.2 },
+                                y: { duration: 0.2, delay: i * 0.2 },
+                            }}
+                            animate={{
+                                scale: 1,
+                                transition: {
+                                    scale: { duration: 0.2, ease: "linear" },
+                                },
                             }}
                             whileHover={{
                                 scale: 1.05,
                                 transition: {
-                                    duration: 0.2,
-                                    ease: "linear",
+                                    scale: { duration: 0.2, ease: "linear" },
                                 },
                             }}
                         >
