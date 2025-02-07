@@ -1,74 +1,51 @@
-<<<<<<< HEAD
-# Getting Started with Create React App
+# 포트폴리오 웹사이트
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React와 Framer Motion을 활용한 개인 포트폴리오 웹사이트입니다.
 
-## Available Scripts
+## 주요 기능
 
-In the project directory, you can run:
+-   반응형 디자인
+-   스크롤 기반 애니메이션
+-   포트폴리오 프로젝트 쇼케이스
+-   소셜 미디어 링크
+-   연락처 섹션
 
-### `npm start`
+## 사용 기술
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+-   React
+-   Framer Motion (애니메이션)
+-   CSS Modules (스타일링)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 애니메이션 특징
 
-### `npm test`
+1. 스크롤 기반 섹션 등장
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    - 각 섹션이 화면에 보일 때 아래에서 위로 등장
+    - Framer Motion의 `whileInView` 기능 활용
 
-### `npm run build`
+2. 포트폴리오 아이템
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    - 순차적 등장 애니메이션
+    - 호버 효과 (확대)
+    - 각 아이템별 지연 효과
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. 헤더 섹션
+    - 페이드인과 슬라이드 효과 결합
+    - 부드러운 등장 애니메이션
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 프로젝트 구조
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
-# react-portfolio
->>>>>>> 9d855cd0ccb23155fa80cab8cb52dcae32f9f826
+```bash
+src/
+├── components/
+│ ├── Header.jsx
+│ ├── Nav.jsx
+│ ├── About.jsx
+│ ├── Experience.jsx
+│ ├── Services.jsx
+│ ├── Portfolio.jsx
+│ ├── Testimonials.jsx
+│ ├── Contact.jsx
+│ └── Footer.jsx
+├── App.jsx
+```
