@@ -176,19 +176,24 @@ const Services = () => {
                         </div>
                         <ul className={classes["service__list"]}>
                             {item.description.map((description, index) => (
+                                // React.Fragment로 여러 요소를 그룹화 (고유 key 부여)
                                 <React.Fragment key={`${item.id}-${index}`}>
+                                    {/* 아코디언 헤더 - 클릭 시 토글 */}
                                     <li
                                         onClick={() => {
+                                            // content가 있는 경우에만 토글 가능
                                             if (description.content) {
                                                 toggleHandler(item.id, index);
                                             }
                                         }}
                                         style={{ cursor: description.content ? "pointer" : "default" }}
                                     >
+                                        {/* 아이콘과 제목을 포함하는 컨테이너 */}
                                         <div className={classes["service__list-icon-container"]}>
                                             <BiCheck className={classes["service__list-icon"]} />
                                             <p>{description.title}</p>
                                         </div>
+                                        {/* 토글 버튼 - content가 있는 경우에만 표시 */}
                                         {description.content && (
                                             <div className={classes.toggle__btn}>
                                                 {description.isOpen ? (
@@ -205,29 +210,39 @@ const Services = () => {
                                             </div>
                                         )}
                                     </li>
+                                    {/* Framer Motion 애니메이션 컨테이너 */}
                                     <AnimatePresence initial={false}>
+                                        {/*AnimatePresence - 컴포넌트가 DOM에서 제거될 때도 애니메이션을 적용할 수 있게 해주는 컴포넌트 */}
+                                        {/* 초기 마운트 시 애니메이션 비활성화 */}
                                         {description.isOpen && (
+                                            // 애니메이션되는 컨테이너
                                             <motion.div
-                                                key="content"
+                                                // 각 content에 대한 고유 키
+                                                key={`content-${item.id}-${index}`}
+                                                // 초기 상태 - 높이 0, 투명
                                                 initial={{ height: 0, opacity: 0 }}
+                                                // 나타날 때의 애니메이션
                                                 animate={{
-                                                    height: "auto",
+                                                    height: "auto", // 컨텐츠 높이에 맞게 자동 조절
                                                     opacity: 1,
                                                     transition: {
-                                                        height: { duration: 0.3 },
-                                                        opacity: { duration: 0.3 },
+                                                        height: { duration: 0.3 }, // 높이 변화 시간
+                                                        opacity: { duration: 0.3 }, // 투명도 변화 시간
                                                     },
                                                 }}
+                                                // 사라질 때의 애니메이션
                                                 exit={{
                                                     height: 0,
                                                     opacity: 0,
                                                     transition: {
                                                         height: { duration: 0.3 },
-                                                        opacity: { duration: 0.1 },
+                                                        opacity: { duration: 0.1 }, // 투명도는 더 빠르게 변화
                                                     },
                                                 }}
+                                                // 높이 변화 시 내용이 넘치지 않도록 설정
                                                 style={{ overflow: "hidden" }}
                                             >
+                                                {/* 아코디언 컨텐츠 */}
                                                 <ul className={classes["service__list-content"]}>
                                                     {description.content.map((content, i) => (
                                                         <li key={i}>
