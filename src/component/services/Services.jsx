@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { AiOutlineDown, AiOutlineUp } from "react-icons/ai";
 import { BiCheck } from "react-icons/bi";
 import classes from "./Services.module.css";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 const data = [
     {
         id: Math.random(),
@@ -178,7 +178,11 @@ const Services = () => {
                             {item.description.map((description, index) => (
                                 <React.Fragment key={`${item.id}-${index}`}>
                                     <li
-                                        onClick={() => toggleHandler(item.id, index)}
+                                        onClick={() => {
+                                            if (description.content) {
+                                                toggleHandler(item.id, index);
+                                            }
+                                        }}
                                         style={{ cursor: description.content ? "pointer" : "default" }}
                                     >
                                         <div className={classes["service__list-icon-container"]}>
@@ -201,22 +205,42 @@ const Services = () => {
                                             </div>
                                         )}
                                     </li>
-                                    {description.content && (
-                                        <ul className={`${description.isOpen ? classes.open : ""}`}>
-                                            {description.content.map((content, i) => (
-                                                <li key={i}>
-                                                    <p
-                                                        initial={{ opacity: 0, y: 50 }}
-                                                        whileInView={{ opacity: 1, y: 0 }}
-                                                        transition={{ duration: 0.5, delay: i * 0.2 }}
-                                                    >
-                                                        <span>{i + 1}. </span>
-                                                        {content}
-                                                    </p>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    )}
+                                    <AnimatePresence initial={false}>
+                                        {description.isOpen && (
+                                            <motion.div
+                                                key="content"
+                                                initial={{ height: 0, opacity: 0 }}
+                                                animate={{
+                                                    height: "auto",
+                                                    opacity: 1,
+                                                    transition: {
+                                                        height: { duration: 0.3 },
+                                                        opacity: { duration: 0.3 },
+                                                    },
+                                                }}
+                                                exit={{
+                                                    height: 0,
+                                                    opacity: 0,
+                                                    transition: {
+                                                        height: { duration: 0.3 },
+                                                        opacity: { duration: 0.1 },
+                                                    },
+                                                }}
+                                                style={{ overflow: "hidden" }}
+                                            >
+                                                <ul className={classes["service__list-content"]}>
+                                                    {description.content.map((content, i) => (
+                                                        <li key={i}>
+                                                            <p>
+                                                                <span>{i + 1}. </span>
+                                                                {content}
+                                                            </p>
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            </motion.div>
+                                        )}
+                                    </AnimatePresence>
                                 </React.Fragment>
                             ))}
                         </ul>

@@ -34,24 +34,14 @@
 .service__list {
     padding: 2rem;
 }
-.service__list > ul {
+.service__list-content {
     border-left: 1px solid var(--color-primary);
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
     margin-left: 2rem;
-
-    transition: all 0.3s ease-in-out;
-}
-
-.service__list > ul.open {
-    max-height: 500px; /* 충분히 큰 값으로 설정 */
-    opacity: 1;
-    margin: 1rem 0 1rem 2rem;
     padding: 1rem 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .service__list > ul > li {
@@ -143,4 +133,18 @@
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
+}
+
+ul {
+    list-style: none;
+    overflow: hidden;
+}
+
+li {
+    margin-bottom: 0.8rem;
+}
+
+li p {
+    display: flex;
+    gap: 0.5rem;
 }
