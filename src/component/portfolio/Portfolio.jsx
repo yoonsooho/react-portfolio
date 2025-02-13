@@ -35,9 +35,14 @@ const Portfolio = (props) => {
                             }}
                         >
                             <div className={classes["portfolio__item-image"]}>
-                                <img src={item.image} alt={item.image} />
+                                <img
+                                    src={item.image}
+                                    alt={item.image}
+                                    style={{ width: "100%", height: "200px", objectFit: "cover" }}
+                                />
                             </div>
                             <h3>{item.title}</h3>
+                            <p>{item.review}</p>
                             <div className={classes["portfolio__item-cta"]}>
                                 {item.github !== "" && (
                                     <a href={item.github} className="btn" target="_blank" rel="noopener noreferrer">

@@ -1,17 +1,18 @@
-import React from "react";
 import { motion } from "framer-motion";
+import React from "react";
+import About from "./component/about/About";
+import Contact from "./component/contact/Contact";
+import Experience from "./component/experience/Experience";
+import Footer from "./component/footer/Footer";
 import Header from "./component/header/Header";
 import Nav from "./component/nav/Nav";
-import About from "./component/about/About";
-import Experience from "./component/experience/Experience";
-import Services from "./component/services/Services";
 import Portfolio from "./component/portfolio/Portfolio";
+import Services from "./component/services/Services";
 import Testimonials from "./component/testimonials/Testimonials";
-import Contact from "./component/contact/Contact";
-import Footer from "./component/footer/Footer";
 
-import ems from "./assets/ems.png";
 import apimanager from "./assets/apimanager.png";
+import ems from "./assets/ems.png";
+import journey from "./assets/journey.png";
 
 const App = () => {
     let data = [
@@ -32,6 +33,15 @@ const App = () => {
             demo: "https://apimanager-z5tr.vercel.app",
             review: "api매니저 사이트로 api를 메모처럼 간단하게 저장할 수 있는 웹사이트 입니다.",
             descriptionUrl: "https://www.notion.so/API-18d8f8bdc87480e49cc7e1003c18f1ff?pvs=4",
+        },
+        {
+            id: 3,
+            image: journey,
+            title: "여정 사이트",
+            github: "",
+            demo: "https://dxkiwmo9p9ise.cloudfront.net",
+            review: "여행 동행자 모집 및 각 여행지의 정보를 공유할 수 있는 웹사이트 입니다.",
+            descriptionUrl: "https://perfect-volcano-440.notion.site/Journey-18a8f8bdc874804ab430e8e036d022a6?pvs=4",
         },
     ];
 
