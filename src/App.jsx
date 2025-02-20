@@ -22,7 +22,7 @@ const App = () => {
             title: "EMS 사이트",
             github: "",
             demo: "https://ems-dev.vercel.app",
-            review: "기기 예약 관리자 웹사이트로, 기기등록, 예약, 예약 확인, 예약 취소 등의 기능을 구현하였습니다.",
+            review: "기기 예약 관리자 웹사이트로, 기기등록, 예약, 예약 확인, 예약 취소 등의 기능을 구현하였습니다. nextjs로 구현하였습니다.",
             descriptionUrl: "https://www.notion.so/EMS-1708f8bdc874805ebbebf3aadd56a286?pvs=4",
         },
         {
@@ -31,7 +31,7 @@ const App = () => {
             title: "API매니저 사이트",
             github: "https://github.com/yoonsooho/apimanager",
             demo: "https://apimanager-z5tr.vercel.app",
-            review: "api매니저 사이트로 api를 메모처럼 간단하게 저장할 수 있는 웹사이트 입니다.",
+            review: "api매니저 사이트로 api를 메모처럼 간단하게 저장할 수 있는 웹사이트 입니다. nextjs, supabase로 개발한 풀스택 웹사이트 입니다.",
             descriptionUrl: "https://www.notion.so/API-18d8f8bdc87480e49cc7e1003c18f1ff?pvs=4",
         },
         {
@@ -40,7 +40,7 @@ const App = () => {
             title: "여정 사이트",
             github: "",
             demo: "https://dxkiwmo9p9ise.cloudfront.net",
-            review: "여행 동행자 모집 및 각 여행지의 정보를 공유할 수 있는 웹사이트 입니다.",
+            review: "여행 동행자 모집 및 각 여행지의 정보를 공유할 수 있는 웹사이트 입니다.react로 개발하였고 aws s3 및 cloudfront를 사용하여 배포하였습니다.",
             descriptionUrl: "https://perfect-volcano-440.notion.site/Journey-18a8f8bdc874804ab430e8e036d022a6?pvs=4",
         },
     ];

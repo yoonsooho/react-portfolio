@@ -35,11 +35,7 @@ const Portfolio = (props) => {
                             }}
                         >
                             <div className={classes["portfolio__item-image"]}>
-                                <img
-                                    src={item.image}
-                                    alt={item.image}
-                                    style={{ width: "100%", height: "200px", objectFit: "cover" }}
-                                />
+                                <img src={item.image} alt={item.image} style={{ width: "100%", height: "200px" }} />
                             </div>
                             <h3>{item.title}</h3>
                             <p>{item.review}</p>
