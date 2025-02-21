@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const Header = () => {
     return (
-        <header>
+        <header id="home">
             <div className={`container ${classes["header__container"]}`}>
                 <motion.div
                     viewport={{ once: true, amount: 0.3 }}
@@ -16,10 +16,12 @@ const Header = () => {
                 >
                     <h5>안녕하세요 제 이름은</h5>
                     <h1>윤수호입니다.</h1>
-                    <h5 className={`${classes["text-light"]}`}>프론트엔드 개발자를 목표하고 있습니다.</h5>
+                    <h5 className={`${classes["text-light"]}`}>
+                        프론트엔드 경력 1년 10개월 되었으며, 사용자 경험과 코드 품질을 중요하게 생각하는 프론트엔드
+                        개발자입니다.
+                    </h5>
                     <CTA />
                     <HeaderSocials />
-                    {/* <div className={classes.me}></div> */}
                     <a href="#contact" className={`${classes["scroll__down"]}`}>
                         Scroll Down
                     </a>

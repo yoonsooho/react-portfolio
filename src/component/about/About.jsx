@@ -29,17 +29,6 @@ const About = () => {
                             <h5>phone</h5>
                             <small>010-4953-2679</small>
                         </article>
-                        <article className={classes.about__card}>
-                            <VscFolderLibrary className={classes.about__icon} />
-                            <h5>블로그</h5>
-                            <a
-                                target="_blank"
-                                href="https://perfect-volcano-440.notion.site/29c3b3d5b34846a7bf6623e535ca7b5e?pvs=4"
-                                rel="noreferrer"
-                            >
-                                블로그 이동
-                            </a>
-                        </article>
                     </div>
                     <div className={classes.about__content__right}>
                         <p>✔️ 문제 해결력이 뛰어난 프론트엔드 개발자를 꿈꿉니다. </p>

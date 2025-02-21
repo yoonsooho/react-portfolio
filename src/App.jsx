@@ -13,6 +13,7 @@ import Testimonials from "./component/testimonials/Testimonials";
 import apimanager from "./assets/apimanager.png";
 import ems from "./assets/ems.png";
 import journey from "./assets/journey.png";
+import MyBlog from "./component/myblog/MyBlog";
 
 const App = () => {
     let data = [
@@ -71,6 +72,15 @@ const App = () => {
                 viewport={{ once: true, amount: 0.3 }}
             >
                 <About />
+            </motion.div>
+
+            <motion.div
+                initial="hidden"
+                whileInView="visible"
+                variants={sectionVariants}
+                viewport={{ once: true, amount: 0.3 }}
+            >
+                <MyBlog />
             </motion.div>
 
             <motion.div
