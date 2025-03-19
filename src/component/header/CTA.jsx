@@ -1,5 +1,5 @@
 import React from "react";
-import CV from "../../assets/cv.pdf";
+import CV from "../../assets/윤수호__간단명료함을_지향하는_개발자.pdf";
 import classes from "./CTA.module.css";
 
 const CTA = () => {

@@ -1,18 +1,8 @@
-import React, { useEffect, useState } from "react";
-import classes from "./Portfolio.module.css";
 import { motion } from "framer-motion";
+import React from "react";
+import classes from "./Portfolio.module.css";
 
 const Portfolio = (props) => {
-    const [scrollY, setScrollY] = useState(0);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            setScrollY(window.scrollY);
-        };
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
-
     return (
         <section id="portfolio">
             <h5>My Recent Word</h5>
@@ -61,7 +51,7 @@ const Portfolio = (props) => {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
-                                    Live Demo
+                                    사이트 이동
                                 </a>
                                 <a
                                     href={item.descriptionUrl}
@@ -69,7 +59,7 @@ const Portfolio = (props) => {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
-                                    Description
+                                    상세 설명
                                 </a>
                             </div>
                         </motion.article>
