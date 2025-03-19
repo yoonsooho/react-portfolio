@@ -13,10 +13,10 @@ const Contact = () => {
 
         emailjs.sendForm("service_ilhswda", "template_m0w846g", form.current, "HtCZV618CMB_JGPbG").then(
             (result) => {
-                console.log(result.text);
+                alert("메시지가 전달되었습니다.");
             },
             (error) => {
-                console.log(error.text);
+                alert("메시지 전달에 실패했습니다. 다시 시도해주세요.");
             }
         );
         e.target.reset();
@@ -43,11 +43,16 @@ const Contact = () => {
                     </article>
                 </div>
                 <form ref={form} onSubmit={sendEmail}>
-                    <input type="text" name="name" placeholder="Your Full Name" required />
-                    <input type="email" name="email" placeholder="Your Email" required />
-                    <textarea name="message" id="" placeholder="Your Message" rows="7"></textarea>
+                    <input type="text" name="name" placeholder="이름" required />
+                    <input type="email" name="email" placeholder="이메일" required />
+                    <textarea
+                        name="message"
+                        id=""
+                        placeholder="전달하고 싶은 메시지를 작성해주세요. 제 이메일로 전달됩니다."
+                        rows="7"
+                    ></textarea>
                     <button type="submit" className="btn btn-primary">
-                        send message
+                        보내기
                     </button>
                 </form>
             </div>

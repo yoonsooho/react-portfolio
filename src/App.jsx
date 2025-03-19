@@ -117,7 +117,6 @@ const App = () => {
             >
                 <Services />
             </motion.div>
-
             <motion.div
                 initial="hidden"
                 whileInView="visible"
