@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import About from "./component/about/About";
 import Contact from "./component/contact/Contact";
 import Experience from "./component/experience/Experience";
@@ -8,7 +8,7 @@ import Header from "./component/header/Header";
 import Nav from "./component/nav/Nav";
 import Portfolio from "./component/portfolio/Portfolio";
 import Services from "./component/services/Services";
-import Testimonials from "./component/testimonials/Testimonials";
+import Loading from "./component/loading/Loading";
 
 import apimanager from "./assets/apimanager.png";
 import ems from "./assets/ems.png";
@@ -16,6 +16,17 @@ import journey from "./assets/journey.png";
 import MyBlog from "./component/myblog/MyBlog";
 
 const App = () => {
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        // 페이지 로드 시뮬레이션 (실제로는 필요한 데이터 로드 후에 false로 설정)
+        const timer = setTimeout(() => {
+            setLoading(false);
+        }, 2000); // 2초간 로딩 화면 표시
+
+        return () => clearTimeout(timer);
+    }, []);
+
     let data = [
         {
             id: 1,
@@ -61,6 +72,12 @@ const App = () => {
         },
     };
 
+    // 로딩 중일 때 로딩 컴포넌트 렌더링
+    if (loading) {
+        return <Loading />;
+    }
+
+    // 기존 컴포넌트 렌더링
     return (
         <>
             <Header />
@@ -110,14 +127,15 @@ const App = () => {
                 <Portfolio data={data} />
             </motion.div>
 
-            <motion.div
+            {/* 불필요한 정보로 판단 주석처리 진행 */}
+            {/* <motion.div
                 initial="hidden"
                 whileInView="visible"
                 variants={sectionVariants}
                 viewport={{ once: true, amount: 0.3 }}
             >
                 <Testimonials data={data} />
-            </motion.div>
+            </motion.div> */}
 
             <motion.div
                 initial="hidden"

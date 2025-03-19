@@ -36,17 +36,6 @@ const Footer = () => {
                     <a href="#Contact">Contact</a>
                 </li>
             </ul>
-            <div className={classes.footer__socials}>
-                <a href="http://facebook.com">
-                    <FaFacebook />
-                </a>
-                <a href="http://instagram.com">
-                    <FiInstagram />
-                </a>
-                <a href="http://twitter.com">
-                    <IoLogoTwitter />
-                </a>
-            </div>
             <div className={classes.footer__copyright}>
                 <small>&copy; yoonsooho portfolio</small>
             </div>

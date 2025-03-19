@@ -11,6 +11,9 @@ const CTA = () => {
             <a href="#contact" className="btn">
                 대화 해보기
             </a>
+            <a href="https://github.com/yoonsooho" className="btn" target="_blank" rel="noreferrer">
+                깃허브
+            </a>
         </div>
     );
 };
