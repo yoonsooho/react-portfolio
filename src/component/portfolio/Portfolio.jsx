@@ -77,7 +77,12 @@ const Portfolio = (props) => {
                         width: "100vw",
                         height: "70vh",
                         transform: isView
-                            ? `translateX(-${((scrollPosition - portfolioRefHeight) / portfolioItemHeight) * 100}%)`
+                            ? `translateX(-${
+                                  Math.min(
+                                      props.data.length - 1,
+                                      (scrollPosition - portfolioRefHeight) / portfolioItemHeight
+                                  ) * 100
+                              }%)`
                             : "translateX(0%)",
                     }}
                     ref={portfolioItemRef}
@@ -92,13 +97,19 @@ const Portfolio = (props) => {
                                     paddingLeft: "12.5vw",
                                 }}
                             >
-                                <motion.article style={{ width: "75vw" }} className={classes["portfolio__item"]}>
+                                <motion.article
+                                    style={{ width: "75vw" }}
+                                    className={classes["portfolio__item"]}
+                                    // viewport={{ once: true, amount: 0.3 }}
+                                    // initial={{ opacity: 0, y: 30 }}
+                                    // whileInView={{ opacity: 1, y: 0 }}
+                                    // transition={{
+                                    //     opacity: { duration: 0, delay: i * 0.2 },
+                                    //     y: { duration: 0.2, delay: 0.2 },
+                                    // }}
+                                >
                                     <div className={classes["portfolio__item-image"]}>
-                                        <img
-                                            src={item.image}
-                                            alt={item.image}
-                                            style={{ width: "75vw", height: "400px" }}
-                                        />
+                                        <img src={item.image} alt={item.image} style={{ height: "400px" }} />
                                     </div>
                                     <h3>{item.title}</h3>
                                     <p style={{ marginBottom: "1rem" }}>{item.review}</p>
