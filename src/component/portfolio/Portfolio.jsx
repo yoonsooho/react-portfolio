@@ -92,29 +92,7 @@ const Portfolio = (props) => {
                                     paddingLeft: "12.5vw",
                                 }}
                             >
-                                <motion.article
-                                    style={{ width: "75vw" }}
-                                    className={classes["portfolio__item"]}
-                                    // viewport={{ once: true, amount: 0.3 }}
-                                    // initial={{ opacity: 0, y: 30 }}
-                                    // whileInView={{ opacity: 1, y: 0 }}
-                                    // transition={{
-                                    //     opacity: { duration: 0.2, delay: i * 0.2 },
-                                    //     y: { duration: 0.2, delay: i * 0.2 },
-                                    // }}
-                                    // animate={{
-                                    //     scale: 1,
-                                    //     transition: {
-                                    //         scale: { duration: 0.2, ease: "linear" },
-                                    //     },
-                                    // }}
-                                    // whileHover={{
-                                    //     scale: 1.05,
-                                    //     transition: {
-                                    //         scale: { duration: 0.2, ease: "linear" },
-                                    //     },
-                                    // }}
-                                >
+                                <motion.article style={{ width: "75vw" }} className={classes["portfolio__item"]}>
                                     <div className={classes["portfolio__item-image"]}>
                                         <img
                                             src={item.image}
@@ -123,7 +101,7 @@ const Portfolio = (props) => {
                                         />
                                     </div>
                                     <h3>{item.title}</h3>
-                                    <p>{item.review}</p>
+                                    <p style={{ marginBottom: "1rem" }}>{item.review}</p>
                                     <div className={classes["portfolio__item-cta"]}>
                                         {item.github !== "" && (
                                             <a
