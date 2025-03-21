@@ -79,11 +79,6 @@ const data = [
                 isOpen: false,
             },
             {
-                title: "실시간 타임라인 ui 개발",
-                content: ["현재 시간 기준 진행 상황 실시간 시각화로 일정 관리 효율성 향상"],
-                isOpen: false,
-            },
-            {
                 title: "오퍼레이터 와 GTM사이트 공지사항 기능 추가",
                 content: [
                     "도입배경 : 기존 오퍼레이터 홈페이지에 공지사항을 등록하길 원하는 의견 발생",
