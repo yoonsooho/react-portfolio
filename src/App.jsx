@@ -123,9 +123,8 @@ const App = () => {
                 variants={sectionVariants}
                 viewport={{ once: true, amount: 0.3 }}
             >
-                <Portfolio data={data} />
+                <Portfolio data={data} sectionVariants={sectionVariants} />
             </motion.div>
-
             {/* 불필요한 정보로 판단 주석처리 진행 */}
             {/* <motion.div
                 initial="hidden"

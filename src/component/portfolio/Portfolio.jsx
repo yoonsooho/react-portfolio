@@ -9,25 +9,21 @@ const Portfolio = (props) => {
     const portfolioItemRef = useRef(null);
     const portfolioRefHeight = portfolioRef.current?.offsetTop || 0;
     const portfolioItemHeight = portfolioItemRef.current?.scrollHeight;
+
     useEffect(() => {
         const portfolioCurrentRef = portfolioRef.current;
 
         // 요소가 보이는지 감지하는 observer
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    // 요소가 보일 때 높이 측정
-                    if (entry.isIntersecting) {
-                        setIsView(true);
-                    } else {
-                        setIsView(false);
-                    }
-                });
-            },
-            {
-                threshold: 0.1, // 10% 이상 보일 때 감지
-            }
-        );
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                // 요소가 보일 때 높이 측정
+                if (entry.isIntersecting) {
+                    setIsView(true);
+                } else {
+                    setIsView(false);
+                }
+            });
+        });
         // ref가 설정된 요소 관찰 시작
         if (portfolioRef.current) {
             observer.observe(portfolioRef.current);
@@ -45,9 +41,6 @@ const Portfolio = (props) => {
             window.removeEventListener("scroll", handleScroll);
         };
     }, []);
-
-    // console.log("요소의 높이:", elementHeight);
-    // console.log("portfolioItemHeight:", portfolioItemHeight);
 
     return (
         <section
@@ -76,20 +69,25 @@ const Portfolio = (props) => {
                     style={{
                         width: "100vw",
                         height: "70vh",
-                        transform: isView
-                            ? `translateX(-${
-                                  Math.min(
-                                      props.data.length - 1,
-                                      (scrollPosition - portfolioRefHeight) / portfolioItemHeight
-                                  ) * 100
-                              }%)`
-                            : "translateX(0%)",
+                        transform:
+                            isView && portfolioRefHeight
+                                ? `translateX(-${
+                                      Math.min(
+                                          props.data.length - 1,
+                                          (scrollPosition - portfolioRefHeight) / portfolioItemHeight
+                                      ) * 100
+                                  }%)`
+                                : "translateX(0%)",
                     }}
                     ref={portfolioItemRef}
                 >
                     {props.data.map((item, i) => {
                         return (
-                            <div
+                            <motion.div
+                                initial="hidden"
+                                whileInView="visible"
+                                variants={props.sectionVariants}
+                                viewport={{ amount: 0.3 }}
                                 key={item.id}
                                 style={{
                                     width: "100vw",
@@ -142,7 +140,7 @@ const Portfolio = (props) => {
                                         </a>
                                     </div>
                                 </motion.article>
-                            </div>
+                            </motion.div>
                         );
                     })}
                 </div>
