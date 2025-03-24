@@ -34,7 +34,7 @@ const App = () => {
             title: "EMS 사이트",
             github: "",
             demo: "https://ems-dev.vercel.app",
-            review: "기기 예약 관리자 웹사이트로, 기기등록, 예약, 예약 확인, 예약 취소 등의 기능을 구현하였습니다. nextjs로 구현하였습니다.",
+            review: "기기 예약 관리자 웹사이트로, 기기등록, 예약, 예약 확인, 예약 취소 등의 기능을 구현하였습니다. nextjs로 구현하였습니다.(testId : admin, pw : 1)",
             descriptionUrl: "https://perfect-volcano-440.notion.site/EMS-1a78f8bdc8748077a225de5866e62811?pvs=4",
         },
         {
@@ -43,7 +43,7 @@ const App = () => {
             title: "API매니저 사이트",
             github: "https://github.com/yoonsooho/apimanager",
             demo: "https://apimanager-z5tr.vercel.app",
-            review: "api매니저 사이트로 api를 메모처럼 간단하게 저장할 수 있는 웹사이트 입니다. nextjs, supabase로 db설계부터 디자인 기획까지 개발한 풀스택 웹사이트 입니다.",
+            review: "api매니저 사이트로 api를 메모처럼 간단하게 저장할 수 있는 웹사이트 입니다. nextjs, supabase로 db설계부터 디자인 기획까지 개발한 풀스택 웹사이트 입니다.(testId : a@naver.com, pw : 1)",
             descriptionUrl: "https://perfect-volcano-440.notion.site/API-1a78f8bdc8748081a8b1eb749fe45ca5?pvs=4",
         },
         {
