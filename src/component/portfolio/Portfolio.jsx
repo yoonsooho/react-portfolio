@@ -57,7 +57,7 @@ const Portfolio = (props) => {
                 id="portfolio"
                 ref={portfolioRef}
                 style={{
-                    height: `${(props.data.length - 0.9) * 100}vh`,
+                    height: `${props.data.length * 75 + 15}vh`,
                     position: "relative",
                 }}
             >

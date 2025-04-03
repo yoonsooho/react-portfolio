@@ -46,14 +46,14 @@ const App = () => {
             review: "api매니저 사이트로 api를 메모처럼 간단하게 저장할 수 있는 웹사이트 입니다. nextjs, supabase로 db설계부터 디자인 기획까지 개발한 풀스택 웹사이트 입니다. \n(testId : a@naver.com, pw : 1)",
             descriptionUrl: "https://perfect-volcano-440.notion.site/API-1a78f8bdc8748081a8b1eb749fe45ca5?pvs=4",
         },
-        {
-            id: 3,
-            image: journey,
-            title: "여정 사이트",
-            demo: "https://dxkiwmo9p9ise.cloudfront.net",
-            review: "여행 동행자 모집 및 각 여행지의 정보를 공유할 수 있는 웹사이트 입니다.react로 개발하였고 aws s3 및 cloudfront를 사용하여 배포하였습니다.",
-            descriptionUrl: "https://perfect-volcano-440.notion.site/Journey-1a78f8bdc87480eeb493f22a7a3f0471?pvs=4",
-        },
+        // {
+        //     id: 3,
+        //     image: journey,
+        //     title: "여정 사이트",
+        //     demo: "https://dxkiwmo9p9ise.cloudfront.net",
+        //     review: "여행 동행자 모집 및 각 여행지의 정보를 공유할 수 있는 웹사이트 입니다.react로 개발하였고 aws s3 및 cloudfront를 사용하여 배포하였습니다.",
+        //     descriptionUrl: "https://perfect-volcano-440.notion.site/Journey-1a78f8bdc87480eeb493f22a7a3f0471?pvs=4",
+        // },
         {
             id: 4,
             image: goodlunch,
@@ -61,7 +61,7 @@ const App = () => {
             github: "https://github.com/yoonsooho/lunchgood",
             demo: "https://lunchgood-yoonsoohos-projects.vercel.app",
             appDemo: "https://play.google.com/store/apps/details?id=com.yoonsooho.myapp&hl=ko",
-            review: "오늘의 점심메뉴를 추천받을 수 있는 앱입니다. react와 react native, expo로 개발하였고 플레이 스토어에 배포하였습니다.",
+            review: "오늘의 점심메뉴를 추천받을 수 있는 앱입니다. react와 react native, expo로 개발하였고  스토어에 배포하였습니다.",
         },
     ];
 

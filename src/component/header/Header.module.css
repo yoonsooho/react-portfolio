@@ -10,8 +10,11 @@ header {
     position: relative;
 }
 .header__content {
-    -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-    animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+    /* -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+    animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; */
+    font-size: 1.5rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
 }
 @-webkit-keyframes text-focus-in {
     0% {

@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 // 애니메이션 변수들을 따로 분리
 const floatAnimation = {
     animate: { y: [0, -10, 0] },
-    transition: { repeat: Infinity, duration: 3, ease: "easeInOut" },
+    transition: { duration: 2, ease: "easeInOut" },
 };
 
 const iconAnimation = {
@@ -23,15 +23,41 @@ const About = () => {
             <h2>About Me</h2>
 
             <div className={`container ${classes.about__container}`}>
-                <motion.div className={classes.about__me} {...floatAnimation}>
+                <motion.div
+                    className={classes.about__me}
+                    {...floatAnimation}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.3 }}
+                    variants={{
+                        hidden: { opacity: 0, x: -75 },
+                        visible: { opacity: 1, x: 0 },
+                    }}
+                >
                     <div className={classes["about__me-image"]}>
                         <img src={ME} alt="About Image" />
                     </div>
                 </motion.div>
 
-                <div className={classes.about__content}>
+                <motion.div
+                    className={classes.about__content}
+                    {...floatAnimation}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.3 }}
+                    variants={{
+                        hidden: { opacity: 0, x: 75 },
+                        visible: { opacity: 1, x: 0 },
+                    }}
+                >
                     <div className={classes.about__cards}>
-                        <article className={classes.about__card}>
+                        <article
+                            className={classes.about__card}
+                            {...iconAnimation}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.3 }}
+                        >
                             <motion.div {...iconAnimation}>
                                 <FaAward className={classes.about__icon} />
                             </motion.div>
@@ -57,7 +83,7 @@ const About = () => {
                     <a href="#contact" className="btn btn-primary">
                         대화 해보기
                     </a>
-                </div>
+                </motion.div>
             </div>
         </section>
     );
