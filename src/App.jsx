@@ -11,7 +11,7 @@ import Services from "./component/services/Services";
 import Loading from "./component/loading/Loading";
 
 import apimanager from "./assets/apimanager.png";
-import ems from "./assets/ems.png";
+import Recket from "./assets/Recket.png";
 import journey from "./assets/journey.png";
 import goodlunch from "./assets/goodlunch.png";
 import MyBlog from "./component/myblog/MyBlog";
@@ -30,10 +30,10 @@ const App = () => {
     let data = [
         {
             id: 1,
-            image: ems,
-            title: "EMS 사이트",
+            image: Recket,
+            title: "Recket 사이트",
             github: "",
-            demo: "https://ems-dev.vercel.app",
+            demo: "https://recket.vercel.app/login",
             review: "기기 예약 관리자 웹사이트로, 기기등록, 예약, 예약 확인, 예약 취소 등의 기능을 구현하였습니다. nextjs로 구현하였습니다.\n(testId : admin, pw : 1)",
             descriptionUrl: "https://perfect-volcano-440.notion.site/EMS-1a78f8bdc8748077a225de5866e62811?pvs=4",
         },
