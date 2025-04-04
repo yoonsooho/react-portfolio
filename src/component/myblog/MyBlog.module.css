@@ -46,6 +46,7 @@
     border-radius: 0.5rem;
     font-weight: 500;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .blog__btn:hover {

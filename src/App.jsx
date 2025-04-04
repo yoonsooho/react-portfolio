@@ -61,7 +61,7 @@ const App = () => {
             github: "https://github.com/yoonsooho/lunchgood",
             demo: "https://lunchgood-yoonsoohos-projects.vercel.app",
             appDemo: "https://play.google.com/store/apps/details?id=com.yoonsooho.myapp&hl=ko",
-            review: "오늘의 점심메뉴를 추천받을 수 있는 앱입니다. react와 react native, expo로 개발하였고  스토어에 배포하였습니다.",
+            review: "오늘의 점심메뉴를 추천받을 수 있는 앱입니다. react와 react native, expo로 개발하였고 플레이 스토어에 배포하였습니다.",
         },
     ];
 
