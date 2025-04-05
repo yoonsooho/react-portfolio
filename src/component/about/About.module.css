@@ -80,7 +80,7 @@
     flex-direction: column;
     justify-content: space-around;
     height: 100%;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 .about__content > div > p {
     color: var(--color-light);

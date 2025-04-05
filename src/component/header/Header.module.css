@@ -1,44 +1,56 @@
 header {
-    height: 50vh;
-    padding-top: 7rem;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
 }
 
 .header__container {
     text-align: center;
-    height: 100%;
     position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
 }
+
 .header__content {
-    /* -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-    animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; */
     font-size: 1.5rem;
     padding-left: 10rem;
     padding-right: 10rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    white-space: nowrap;
 }
-@-webkit-keyframes text-focus-in {
-    0% {
-        -webkit-filter: blur(12px);
-        filter: blur(12px);
-        opacity: 0;
-    }
-    100% {
-        -webkit-filter: blur(0px);
-        filter: blur(0px);
-        opacity: 1;
-    }
+
+.header__content h5 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
 }
-@keyframes text-focus-in {
-    0% {
-        -webkit-filter: blur(12px);
-        filter: blur(12px);
-        opacity: 0;
-    }
-    100% {
-        -webkit-filter: blur(0px);
-        filter: blur(0px);
-        opacity: 1;
-    }
+
+.header__content h1 {
+    font-size: 4.5rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    margin: 0.5rem 0 1.5rem;
+}
+
+.header__content h5:first-child {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.text-light {
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+    opacity: 0.9;
 }
 
 .me {
@@ -53,17 +65,51 @@ header {
     padding: 5rem 1.5rem 1.5rem 1.5rem;
 }
 
+/* 미디어 쿼리 중간 크기 */
 @media screen and (max-width: 1024px) {
     header {
         height: 68vh;
     }
+    .header__content {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        gap: 1rem;
+    }
+    .header__content h1 {
+        font-size: 3.5rem;
+    }
+    .header__content h5 {
+        font-size: 1.1rem;
+    }
+    .header__content h5:first-child {
+        font-size: 1.2rem;
+    }
 }
 
+/* 미디어 쿼리 작은 크기 */
 @media screen and (max-width: 600px) {
     header {
         height: 100vh;
     }
-
+    .header__content {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        gap: 0.8rem;
+    }
+    .header__content h1 {
+        font-size: 2.5rem;
+        letter-spacing: -0.5px;
+    }
+    .header__content h5 {
+        font-size: 1rem;
+    }
+    .header__content h5:first-child {
+        font-size: 1.1rem;
+        letter-spacing: 2px;
+    }
+    .text-light {
+        font-size: 0.9rem;
+    }
     .scroll__down {
         display: none;
     }
