@@ -17,7 +17,7 @@ const MyBlog = () => {
                         <VscFolderLibrary />
                     </div>
                     <h3>기술 블로그</h3>
-                    <p>평소 공부하고 있는 내용과 새로 알게된 지식을 잊지 않기 위해 기록하는 공간입니다</p>
+                    <p>평소 공부하고 있는 내용과 새로 알게된 지식을 잊지 않기 위해 기록하는 공간입니다.</p>
                     <div style={{ display: "flex", gap: "10px", justifyContent: "center" }}>
                         {/* <a
                             className={classes.blog__btn}

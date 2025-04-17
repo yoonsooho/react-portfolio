@@ -16,7 +16,6 @@
     padding: 3rem 2rem;
     text-align: center;
     width: 100%;
-
     transition: var(--transition);
 }
 
@@ -34,8 +33,8 @@
 
 .blog__card p {
     color: var(--color-light);
-    margin-bottom: 2rem;
-    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
 }
 
 .blog__btn {

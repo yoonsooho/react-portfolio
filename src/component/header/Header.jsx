@@ -81,6 +81,18 @@ const Header = () => {
                         }}
                     >
                         <CTA />
+                        <motion.div
+                            className={classes.scroll_indicator}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{
+                                delay: 1.6,
+                                duration: 0.8,
+                                ease: "easeInOut",
+                            }}
+                        >
+                            <span className={classes.scroll_text}>Scroll Down</span>
+                        </motion.div>
                     </motion.div>
                 </motion.div>
             </div>

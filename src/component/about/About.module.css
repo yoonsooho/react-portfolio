@@ -1,7 +1,7 @@
 .about__container {
     display: grid;
     grid-template-columns: 35% 50%;
-    gap: 15%;
+    gap: 10%;
 }
 
 .about__me {
@@ -81,10 +81,11 @@
     justify-content: space-around;
     height: 100%;
     font-size: 1.2rem;
+    gap: 1rem;
 }
-.about__content > div > p {
+.about__content > div.about__content__right > p {
     color: var(--color-light);
-    /* margin: 1rem 0; */
+    white-space: nowrap;
 }
 
 /* ------------------미디어 쿼리 중간 크기------------------- */
